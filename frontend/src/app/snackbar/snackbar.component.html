@@ -1,0 +1,13 @@
+<div class="snackbar-head">
+  <div class="snackbar-content">
+    <p [class.res_success]="data === 'Updated Successfully'" [class.res_warn]="data === 'Warning'"
+      [class.res_error]="data === 'Error'">
+      <span class="snackbar-text">{{ data }}</span>
+    </p>
+  </div>
+  <div>
+    <button class="snackbar-btn" (click)="close()">
+      <!-- <mat-icon>clear</mat-icon> -->
+    </button>
+  </div>
+</div>

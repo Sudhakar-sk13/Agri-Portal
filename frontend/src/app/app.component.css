@@ -1,0 +1,13 @@
+.sidebar_flex_parent {
+  width: 10%;
+}
+.sidebar_flex {
+  display: flex;
+}
+.width_component {
+  width: 87%;
+}
+.bg_color {
+  margin-top: 80px;
+  /* background: #eaedf2; */
+}

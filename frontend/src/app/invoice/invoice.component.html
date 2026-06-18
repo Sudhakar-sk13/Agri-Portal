@@ -1,0 +1,355 @@
+<section class="user">
+    <app-card-listing [UserCardData]="user_listing_card_details"></app-card-listing>
+    <div class="user-table">
+        <div class="user_flex">
+            <h2>Invoices</h2>
+            <select (change)="onDateFilterChange($event)">
+                <option value="">Filter by</option>
+                <option value="day">Day ago</option>
+                <option value="week">Week ago</option>
+                <option value="month">Month ago</option>
+                <option value="year">Year ago</option>
+              </select>
+            <button (click)="drawer.toggle()" *ngIf="userDataTemp.role == 'Admin'">+ Add Invoice</button>
+        </div>
+        <div class="container">
+            <table class="table-scroll small-first-col">
+                <thead>
+                    <tr>
+                        <th class="text-align-left">ID</th>
+                        <th>Client Name</th>
+                        <th>Stock Details</th>
+                        <th>Payment Method</th>
+                        <th>Total KG</th>
+                        <th>Amount</th>
+                        <th>Invoice</th>
+                    </tr>
+                </thead>
+                <tbody class="body-half-screen" (scroll)="onScroll()">
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="showShimmer">
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                        <td class="shimmer-container-report-listing">
+                            <div class="shimmer"></div>
+                        </td>
+                    </tr>
+                    <!-- <tr *ngIf="invoiceData.length && invoiceData.length == 0">
+                        <td>
+                            No Records Found
+                        </td>
+                    </tr> -->
+                    <tr *ngIf="show_row_loader" style="justify-content:center; border: none;"><mat-spinner
+                            [style.width.px]="30" [style.height.px]="30"></mat-spinner></tr>
+                    <tr *ngFor="let data of invoiceData; let i = index">
+                        <td class="text-align-left">#{{ i + 1}}</td>
+                        <td>{{data.clients_details.name | titlecase}}</td>
+                        <td>{{data.stock_details.stock_type_description | titlecase}}</td>
+                        <td>{{data.payment_method}}</td>
+                        <td>{{data.stock_details.total_kg}}</td>
+                        <td>{{data.stock_details.estimated_amount}}</td>
+                        <td class="color_yellow"><a target="_blank"
+                                [href]="api.imageBaseURL +'invoice/'+ data._id + '.pdf' ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-cloud-arrow-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708z" />
+                                    <path
+                                        d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                                </svg>
+                            </a></td>
+                    </tr>
+                    <tr style="border: none;">
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<div class="user_drawer">
+    <mat-drawer #drawer position="end" [class.drawer_is_active]="drawer.opened">
+        <div class="display_flex">
+            <h2>Create Invoice</h2>
+            <button (click)="save()">{{is_update ? 'Update' : 'Save'}}</button>
+        </div>
+        <div class="drawer_flex">
+            <div class="wrap-input100 ">
+                <select matNativeControl [(ngModel)]="selectedClient">
+                    <option value="">Select Client</option>
+                    <option *ngFor="let data of ClientData" [value]="data._id">{{data.name}}</option>
+                </select>
+            </div>
+            <div class="wrap-input100 ">
+                <select matNativeControl [(ngModel)]="selectedStock">
+                    <option value="">Select Stock</option>
+                    <option *ngFor="let data of StockData" [value]="data._id">{{data.stock_types.name + ' - ' +
+                        data.stock_type_description + ' - ' + data.estimated_amount}}</option>
+                </select>
+            </div>
+            <div class="wrap-input100 bg_color">
+                <label>Select Payment Method: </label>
+                <mat-radio-group [(ngModel)]="payment_method">
+                    <mat-radio-button value="cash">Cash</mat-radio-button>
+                    <mat-radio-button value="card">Card</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="close_icon">
+            <img src="../../assets/close_icon2.png" alt="close_icon2" (click)="drawer.toggle()">
+        </div>
+    </mat-drawer>
+</div>
+<app-popup [show_poup]="show_delete_poup" (is_delete)="UserDelete($event)"></app-popup>

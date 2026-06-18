@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Build and IDE files
+dist/
+.angular/
+.vscode/
+.idea/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.env
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+__MACOSX/
+**/__MACOSX/

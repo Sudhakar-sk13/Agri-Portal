@@ -1,0 +1,15 @@
+<app-header [login_temp]="login"></app-header>
+<div class="bg_color">
+    <div *ngIf="login">
+        <app-breadcrumbs></app-breadcrumbs>
+        <div class="sidebar_flex">
+            <app-sidebar ngClass="sidebar_flex_parent"></app-sidebar>
+            <div class="width_component">
+                <router-outlet />
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!login">
+        <router-outlet />
+    </div>
+</div>

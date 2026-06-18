@@ -1,0 +1,52 @@
+.popup_parent {
+  width: 20%;
+  background: white;
+  border: 0.5px solid #000000;
+  border-radius: 50px;
+  text-align: center;
+  padding: 50px 15px 50px 20px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+.popup_parent img {
+  margin-bottom: 30px;
+  width: 50px;
+  height: 50px;
+}
+.popup_parent h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.popup_parent p {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.button_flex button {
+  cursor: pointer;
+  width: 45%;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  box-shadow: 0px 2px 0px 0px #e5e5e5;
+  text-transform: uppercase;
+}
+.button_flex .cancel {
+  color: black;
+  background: white;
+  border: 2px solid #e5e5e5;
+}
+.button_flex .delete {
+  background: black;
+  color: white;
+}
+.button_flex {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

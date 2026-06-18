@@ -1,0 +1,57 @@
+<div class="login">
+    <div class="inner-login-div">
+        <div class="login-display-flex">
+            <div class="login-img">
+                <img src="../../assets/logo.jpg" alt="">
+            </div>
+            <div *ngIf="login" class="login-content">
+                <div class="login-sub-content">
+                    <h2>Login</h2>
+                    <p>Email</p>
+                    <input [autofocus]="true" matInput placeholder="Enter your email" [(ngModel)]="email">
+                    <span class="error" *ngIf="show_email_error">Please Enter your email</span>
+                    <button (click)="submit()">Sign In</button>
+                </div>
+            </div>
+            <div *ngIf="!login" class="otp-content">
+                <div class="otp-sub-content">
+                    <h2>Enter your otp</h2>
+                    <p>You have received a 6 digit OTP code. <br>Please enter it</p>
+                    <div class="opt-flex-parent">
+                        <div class="opt-flex-sub-parent">
+                            <div>
+                                <input (paste)="onPaste($event ,'input1')" #myInput1 autofocus
+                                    (input)="onNumericInput($event,'input1')" matInput [(ngModel)]="opt.input1"
+                                    maxlength="1">
+                            </div>
+                            <div>
+                                <input (paste)="onPaste($event ,'input2')" #myInput2 autofocus (input)="onNumericInput($event,'input2')"
+                                    matInput [(ngModel)]="opt.input2" maxlength="1">
+                            </div>
+                            <div>
+                                <input (paste)="onPaste($event ,'input3')" #myInput3 autofocus (input)="onNumericInput($event,'input3')"
+                                    matInput [(ngModel)]="opt.input3" maxlength="1">
+                            </div>
+                            <div>
+                                <input (paste)="onPaste($event ,'input4')" #myInput4 autofocus (input)="onNumericInput($event,'input4')"
+                                    matInput [(ngModel)]="opt.input4" maxlength="1">
+                            </div>
+                            <div>
+                                <input (paste)="onPaste($event ,'input5')" #myInput5 autofocus (input)="onNumericInput($event,'input5')"
+                                    matInput [(ngModel)]="opt.input5" maxlength="1">
+                            </div>
+                            <div>
+                                <input (paste)="onPaste($event ,'input6')" #myInput6 autofocus (input)="onNumericInput($event,'input6')"
+                                    matInput [(ngModel)]="opt.input6" maxlength="1">
+                            </div>
+                        </div>
+                        <span class="error" *ngIf="show_otp_error">{{opt_error}}</span>
+                        <p *ngIf="is_timer" class="resend_otp">Valid till: <span class="count_down">{{display}}</span>
+                        </p>
+                    </div>
+                    <button (click)="submit()">{{opt_button}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

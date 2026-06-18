@@ -1,0 +1,30 @@
+.breadcrumbs_parent {
+  display: flex;
+  padding: 25px 0;
+  padding-bottom: 0;
+}
+.breadcrumbs_dummy {
+  width: 10%;
+}
+.breadcrumbs_main {
+  width: 90%;
+}
+.breadcrumbs_main p {
+  color: #707eae;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.breadcrumbs_main h1 {
+  color: white ;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+  margin-bottom: 0;
+}
+
+table.table-scroll.small-first-col{
+  background: white;
+}

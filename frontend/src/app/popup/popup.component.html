@@ -1,0 +1,9 @@
+<div class="popup_parent" *ngIf="is_popup">
+    <img src="../../assets/delete_icon.png">
+    <h2>Delete Request</h2>
+    <p>Are you sure you want to delete this request?</p>
+    <div class="button_flex">
+        <button class="cancel"(click)="closePopup()">Cancel</button>
+        <button class="delete"(click)="deletePopup()">Delete</button>
+    </div>
+</div>
